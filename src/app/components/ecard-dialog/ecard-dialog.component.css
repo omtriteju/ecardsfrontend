@@ -3,6 +3,8 @@
     font-size: 24px;
     font-weight: 500;
     text-align: center;
+    margin: 0px;
+    color: #99999B;
   }
   
   .highlight-text {
@@ -37,6 +39,7 @@
   .cancel-link {
     color: #666;
     /* text-decoration: none; */
+    cursor: pointer;
     font-size: 14px;
   }
   
@@ -47,56 +50,41 @@
   .e-card-image{
     height: 400px;
     margin: 0px !important;
+    border-radius: 20px;
   }
 
 /* Container for the entire e-card */
 .ecard-container {
-    background: white;
-    width: 350px;
-    height: 550px;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    text-align: center;
-  }
+  position: relative; /* This allows absolutely positioned children */
+  text-align: center;
   
-  /* Header with a triangular cut */
-  .ecard-header {
-    position: relative;
-    height: 60%;
-    background: linear-gradient(to bottom, #ff6a00 50%, #ffd300 50%);
-    border-radius: 20px 20px 0 0;
-    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 70%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+}
+
+/* .e-card-image {
+  width: 100%; 
+  height: auto; 
+} */
+
+.qr-code-overlay {
+  position: absolute; /* Position it relative to the parent */
+  top: 76%; /* Adjust this value to move the QR code vertically */
+  left: 50%; /* Center it horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+  z-index: 10; /* Make sure the QR code is above the image */
+}
+
+.ecard-footer {
+  position: relative; /* Maintain the footer's position */
+  text-align: center; /* Center text */
+  z-index: 5; /* Ensure footer is above the image but below the QR code */
+}
+
+.ecard-scan-text {
+  color: #000; /* Adjust text color as needed */
+  font-size: 14px; /* Adjust font size */
   
-  /* Section for name and position text */
-  .text-section {
-    text-align: center;
-    color: white;
-  }
-  
-  .ecard-name {
-    font-size: 28px;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .ecard-position {
-    font-size: 18px;
-    font-weight: 300;
-    margin: 0;
-    opacity: 0.8;
-  }
-  
-  /* QR Code Section */
-  .ecard-footer {
-    height: 40%;
-    padding-top: 40px;
-  }
-  
+}
+
   .qr-code-image {
     width: 150px;
     height: 150px;
@@ -108,5 +96,53 @@
     font-weight: 500;
     color: black;
   }
+  .e-card-toptext {
+    position: absolute;
+    top: 20%; /* Adjust this value to control the vertical position */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    width: 65%; /* Adjust the width to stay within the image */
+    color: #fff; /* White text */
+    text-align: right; /* Center align text */
+    z-index: 2; /* Ensure the text stays on top of the image */
+    overflow: hidden; /* Ensures text does not go outside the container */
+    white-space: nowrap; /* Prevents the text from wrapping to the next line */
+    font-size: 16px; /* Adjust font size */
+    font-weight: 700
+    
+  }
+  .e-card-footertext {
+    position: absolute;
+    top: 93%; /* Adjust this value to control the vertical position */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    width: 65%; /* Adjust the width to stay within the image */
+    color: black; /* White text */
+    text-align: center; /* Center align text */
+    z-index: 2; /* Ensure the text stays on top of the image */
+    overflow: hidden; /* Ensures text does not go outside the container */
+    white-space: nowrap; /* Prevents the text from wrapping to the next line */
+    font-size: 12px; /* Adjust font size */
+    font-weight: 700
+    
+  }
+
+  .position-text{
+    font-size: 10px; /* Adjust font size */
+    font-weight: 400
+  }
+
+  ::ng-deep mat-dialog-container {
+    display: block;
+    padding: 6px 24px !important;
+    border-radius: 10px !important;
+    box-sizing: border-box;
+    overflow: auto;
+    outline: 0;
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    max-height: inherit;
+}
   
   

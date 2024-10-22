@@ -1,3 +1,9 @@
+<div style="text-align: end;">
+  <svg (click)="closeDialog()" style="cursor: pointer;" width="16" height="16" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2.1 21L0 18.9L8.4 10.5L0 2.1L2.1 0L10.5 8.4L18.9 0L21 2.1L12.6 10.5L21 18.9L18.9 21L10.5 12.6L2.1 21Z" fill="#94A3B8"/>
+  </svg>
+</div>
+
 <h2 class="popup-title">Your <span class="highlight-text">e-card</span> is here</h2>
 
 <!-- <div class="ecard-image" style="text-align: center;">
@@ -5,26 +11,36 @@
 
 </div> -->
 
-<div class="ecard-container">
-    <!-- Top Section with dynamic name and position -->
-    <div class="ecard-header">
-      <div class="ecard-background">
-        <div class="text-section">
-          <h1 class="ecard-name">name </h1>
-          <h3 class="ecard-position">position </h3>
-        </div>
-      </div>
-    </div>
-  
-    <!-- QR Code Section -->
-    <div class="ecard-footer">
-      <img src="qrCodeUrl" alt="QR Code" class="qr-code-image" />
-      <p class="ecard-scan-text">Scan for  scanText </p>
-    </div>
+<div class="ecard-container pt-1">
+  <!-- Top Section with dynamic name and position -->
+  <img src="../../../assets/images/ecard-background.png" alt="Spectra Logo" class="e-card-image">
+  <div class="e-card-toptext pe-2" >
+    <p style="margin: 0px;">Mohan krishna </p>
+    <p style="margin: 0px;">Sai</p>
+    <p class="position-text">Software Developer</p>
+
   </div>
+  <p class="e-card-footertext ">Scan for <span style="font-weight: bold;">NEW JOBPHORIA</span></p>
   
-<div style="display: flex;flex-direction: column;padding: 0px 75px;align-items: center;">
+  <!-- QR Code Section -->
+  <div class="qr-code-overlay">
+    <qrcode
+      [qrdata]="'http://localhost:4200/e-card/mohan.krishnasai@spectraforce.com'"
+      [width]="144"
+      [elementType]="'url'"
+      [colorLight]="'#f8d731'"
+      [errorCorrectionLevel]="'M'">
+    </qrcode>
+  </div>
+
+  <!-- <div class="ecard-footer">
+    <p class="ecard-scan-text">Scan for scanText</p>
+  </div> -->
+</div>
+
+  
+<div class="pt-2" style="display: flex;flex-direction: column;padding: 0px 75px;align-items: center;">
     <button mat-button class="download-button" (click)="downloadEcard()">Download e-card</button>
-<a href="#" class="cancel-link" (click)="closeDialog()">Cancel</a>
+<a class="cancel-link" (click)="closeDialog()">Cancel</a>
 </div>
 

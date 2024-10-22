@@ -25,6 +25,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSelectModule } from '@angular/material/select';
 import { EcardDialogComponent } from './components/ecard-dialog/ecard-dialog.component';
+import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
+import { QRCodeModule } from 'angularx-qrcode';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,8 @@ import { EcardDialogComponent } from './components/ecard-dialog/ecard-dialog.com
     FontAwesomeModule,
     MatTooltipModule,
     MatTabsModule,
-    MatSelectModule
+    MatSelectModule,
+    QRCodeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
