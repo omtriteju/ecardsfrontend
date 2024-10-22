@@ -1,0 +1,164 @@
+.edit-profile-container {
+   
+    overflow-y: scroll;
+    max-height: 460px;
+    /* Uncomment the background color if needed */
+    /* background-color: #f6f6f6; */
+}
+
+/* Commented out for the moment. Uncomment if needed */
+/* .edit-profile-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+} */
+
+.profile-image-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    position: relative;
+    display: flex;
+    
+    align-items: center;
+    gap: 20px;
+}
+input{
+    border-radius: 30px !important;
+    width: 100%;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+.edit-image-icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+.edit-icon {
+    color: #666;
+    font-size: 12px;
+}
+
+h2 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.form-field {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+}
+
+.add-link-section {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.add-link-icon {
+    font-size: 16px;
+    color: #007bff;
+}
+
+.add-link-text {
+    margin-left: 5px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.form-actions {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.save-button {
+    background-color: #ff6d00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px !important;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+    background-color: #e86500; /* Darker shade on hover */
+}
+
+.cancel-button {
+    background: none;
+    color: #666;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-decoration: underline;
+    border: none;
+}
+
+.cancel-button:hover {
+    color: #333; /* Darker shade on hover */
+}
+
+::ng-deep .mat-dialog-container {
+    background-color: #F4F4F4;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.edit-profile-container::-webkit-scrollbar {
+    width: 1.73px;
+    height: 2px;
+}
+
+.edit-profile-container::-webkit-scrollbar-thumb {
+    background-color: #F4F4F4;
+    border-radius: 10.91px;
+}
+
+.edit-profile-container::-webkit-scrollbar-track {
+    background: #F4F4F4;
+    border-radius: 10.91px;
+}
+.user-profile-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Makes the icon circular */
+    background-color: #f0f0f0; /* Light background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  .text-danger {
+    
+    padding-left: 9px;
+}

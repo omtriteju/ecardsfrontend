@@ -1,0 +1,146 @@
+<div style="display: flex; justify-content: space-between;">
+    <p style="font-size: 20px; font-weight: 700; line-height: 24px;">{{ title }}</p>
+    <svg (click)="cancelEdit()" style="cursor: pointer;" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.1 21L0 18.9L8.4 10.5L0 2.1L2.1 0L10.5 8.4L18.9 0L21 2.1L12.6 10.5L21 18.9L18.9 21L10.5 12.6L2.1 21Z" fill="#94A3B8"/>
+    </svg>
+</div>
+<div class="edit-profile-container">
+    <div class="edit-profile-card">
+        <div class="profile-image-section">
+            <div class="profile-image">
+                <div class="user-profile-icon">
+                    <fa-icon [icon]="['fas', 'user']" class="user-icon"></fa-icon>
+                </div>
+                <div>
+                    <p style="font-size: 14px; font-weight: 700; line-height: 24px;">
+                        {{ user.firstName }} {{ user.lastName }}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Fields -->
+        <form (ngSubmit)="saveChanges(userForm)" id="userForm" #userForm="ngForm">
+            <div class="form-field">
+                <input
+                    type="text"
+                    [(ngModel)]="user.firstName"
+                    placeholder="First Name"
+                    name="firstName"
+                    required
+                    #firstName="ngModel" />
+                <div *ngIf="firstName.invalid && (firstName.touched || isSubmitted)" class="text-danger">
+                    <div *ngIf="firstName.errors?.['required']">First Name is required.</div>
+                </div>
+            </div>
+
+            <div class="form-field">
+                <input
+                    type="text"
+                    [(ngModel)]="user.lastName"
+                    placeholder="Last Name"
+                    name="lastName"
+                    required
+                    #lastName="ngModel" />
+                <div *ngIf="lastName.invalid && (lastName.touched || isSubmitted)" class="text-danger">
+                    <div *ngIf="lastName.errors?.['required']">Last Name is required.</div>
+                </div>
+            </div>
+
+            <div class="form-field">
+                <input
+                    type="email"
+                    [(ngModel)]="user.email"
+                    placeholder="Email"
+                    name="email"
+                    required
+                    email
+                    #email="ngModel" />
+                <div *ngIf="email.invalid && (email.touched || isSubmitted)" class="text-danger">
+                    <div *ngIf="email.errors?.['required']">Email is required.</div>
+                    <div *ngIf="email.errors?.['email']">Enter a valid email.</div>
+                </div>
+            </div>
+
+            <div class="form-field">
+                <input
+                    type="text"
+                    [(ngModel)]="user.jobTitle"
+                    placeholder="Job Title"
+                    name="jobTitle"
+                    required
+                    #jobTitle="ngModel" />
+                <div *ngIf="jobTitle.invalid && (jobTitle.touched || isSubmitted)" class="text-danger">
+                    <div *ngIf="jobTitle.errors?.['required']">Job Title is required.</div>
+                </div>
+            </div>
+
+            <div class="form-field">
+                <input
+                    type="text"
+                    [(ngModel)]="user.phoneNumberPrimary"
+                    placeholder="Primary Phone"
+                    name="phoneNumberPrimary"
+                    required
+                    pattern="^\d{10}$"
+                    #phoneNumberPrimary="ngModel" />
+                <div *ngIf="phoneNumberPrimary.invalid && (phoneNumberPrimary.touched || isSubmitted)" class="text-danger">
+                    <div *ngIf="phoneNumberPrimary.errors?.['required']">Primary phone number is required.</div>
+                    <div *ngIf="phoneNumberPrimary.errors?.['pattern']">Enter a valid 10-digit phone number.</div>
+                </div>
+            </div>
+
+            <div class="form-field">
+                <input
+                    type="text"
+                    [(ngModel)]="user.phoneNumberSecondary"
+                    placeholder="Secondary Phone (Optional)"
+                    name="phoneNumberSecondary"
+                    pattern="^\d{10}$"
+                    #phoneNumberSecondary="ngModel" />
+                <div *ngIf="phoneNumberSecondary.invalid && (phoneNumberSecondary.touched || isSubmitted)" class="text-danger">
+                    <div *ngIf="phoneNumberSecondary.errors?.['pattern']">Enter a valid 10-digit phone number.</div>
+                </div>
+            </div>
+
+            <div class="form-field">
+                <input
+                    type="text"
+                    [(ngModel)]="user.linkedinLink"
+                    placeholder="LinkedIn Link"
+                    name="linkedinLink"
+                    pattern="https?://.+" 
+                    required
+                    #linkedinLink="ngModel" />
+                <div *ngIf="linkedinLink.invalid && (linkedinLink.touched || isSubmitted)" class="text-danger">
+                    <div *ngIf="linkedinLink.errors?.['pattern']">Enter a valid URL starting with http:// or https://.</div>
+                    <div *ngIf="linkedinLink.errors?.['required']">Linked link is required.</div>
+                </div>
+            </div>
+
+            <div class="form-field">
+                <input
+                    type="text"
+                    [(ngModel)]="user.websiteLink"
+                    placeholder="Website Link"
+                    name="websiteLink"
+                    pattern="https?://.+" 
+                    required
+                    #websiteLink="ngModel" />
+                <div *ngIf="websiteLink.invalid && (websiteLink.touched || isSubmitted)" class="text-danger">
+                    <div *ngIf="websiteLink.errors?.['pattern']">Enter a valid URL starting with http:// or https://.</div>
+                    <div *ngIf="websiteLink.errors?.['required']">Website link is required.</div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="save-button" >
+                    Save Changes
+                </button>
+                <button type="button" (click)="cancelEdit()" class="cancel-button">
+                    Cancel
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

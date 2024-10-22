@@ -1,0 +1,251 @@
+<div class="container-fluid  ecard-container  p-0">
+  <nav class="navbar">
+
+    <div>
+      <img src="../../../assets/images/spectra-logo.png" alt="Spectra Logo" class="spectra-logo">
+
+    </div>
+
+
+    <div>
+      <div class="user-profile-icon2">
+        <fa-icon [icon]="['fas', 'user']" class="user-icon2"></fa-icon>
+      </div>
+    </div>
+
+  </nav>
+  <div class="mt-4 me-5" style="align-items: end;text-align: end;">
+    <button class="generate-ecard-btn" (click)="openEcardDialog()">Generate e-card</button>
+  </div>
+  
+
+  <div class="e-card" *ngIf="userProfile">
+    <img src="../../../assets/images/spectra-card.png" alt="Spectra Logo" class="spectra-background-logo">
+
+
+
+
+
+    <div class="user-profile-icon">
+      <fa-icon [icon]="['fas', 'user']" class="user-icon"></fa-icon>
+    </div>
+
+    <!-- <img [src]="userProfile.imageUrl" alt="{{ userProfile.name }}"> -->
+    <p style="font-size: 28px;font-weight: 600;color: #0F172A;margin: 0px;">{{ userProfile.name }}</p>
+    <p class="mt-2" style="font-size: 15px;font-weight: 400;margin: 0px;">{{ userProfile.position }}</p>
+
+    <div class="contact-container mt-2">
+      <button class="call-button">Call Me</button>
+      <a href="https://wa.me/your-phone-number" target="_blank">
+        <img src="../../../assets/images/whatsup.png" alt="WhatsApp" class="whatsapp-icon">
+      </a>
+    </div>
+
+
+    <!-- <div class="contact-info">
+          <a href="tel:{{ userProfile.phone }}">Call: {{ userProfile.phone }}</a>
+          <a href="mailto:{{ userProfile.email }}">{{ userProfile.email }}</a>
+          <a [href]="userProfile.linkedin" target="_blank">LinkedIn</a>
+          <a [href]="userProfile.website" target="_blank">Website</a>
+        </div> -->
+    <div class="tab-container pt-3">
+      <mat-tab-group>
+        <mat-tab label="Home">
+          <div class="tab-content">
+            <p class="ps-2" style="text-align: left;margin: 0px !important; font-size: 16px; font-weight: 400;color: #0F172A;">Links</p>
+            <div class="links-section">
+              <div class="contact-item" >
+                <div class="icon-column">
+                  <img src="../../../assets/images/mobile-icon.png" class="contact-icon" alt="LinkedIn Icon">
+
+                </div>
+                <div class="info-column">
+                  <p class="profile-info">+917995031778</p>
+                  <p class="profile-heading">Mobile</p>
+                </div>
+              </div>
+              <div class="contact-item" >
+                <div class="icon-column">
+                  <img src="../../../assets/images/mobile-icon.png" class="contact-icon" alt="LinkedIn Icon">
+
+                </div>
+                <div class="info-column">
+                  <p class="profile-info">+917995031778</p>
+                  <p class="profile-heading">Mobile</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="icon-column">
+                  <img src="../../../assets/images/email.png" class="contact-icon" alt="LinkedIn Icon">
+
+                </div>
+                <div class="info-column">
+                  <p class="profile-info">mohan.krishnasai@spectraforce.com</p>
+                  <p class="profile-heading">Email</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="icon-column">
+                  <img src="../../../assets/images/linkedin.png" class="contact-icon" alt="LinkedIn Icon">
+                </div>
+                <div class="info-column">
+                  <p class="profile-info">https://www.linkedin.com/in/sai-mohan-krishna-626451141/</p>
+                  <p class="profile-heading">LinkedIn</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="icon-column">
+                  <img src="../../../assets/images/website.png" class="contact-icon" alt="LinkedIn Icon">
+
+                </div>
+                <div class="info-column">
+                  <p class="profile-info">https://irecruit.spectraforce.com/</p>
+                  <p class="profile-heading">Website</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Embedded Video Section -->
+            <div class="video-section">
+              <div class="video-container"
+                style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px;">
+                <iframe src="https://www.youtube.com/embed/n4KuFM60CpY" title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 20px;"></iframe>
+              </div>
+            </div>
+
+
+
+            <!-- Buttons Section -->
+            <div class="button-container pt-3">
+              <button class="custom-button">
+                <img src="../../../assets/images/share.png" style="height: 20px;width: 20px;" alt="LinkedIn Icon">
+                &nbsp;&nbsp;Send
+              </button>
+              <button class="custom-button">
+                <img src="../../../assets/images/download.png" style="height: 20px;width: 20px;" alt="LinkedIn Icon">
+                &nbsp;&nbsp; Save Contact
+              </button>
+            </div>
+            <!-- <p class="pt-3 m-0" style="text-align: left;">Copyright 2023 SPECTRAFORCE®. All Rights Reserved.</p> -->
+            <p class="footer-text">Copyright 2023 SPECTRA<span class="footer-inside-text">FORCE</span>®. All Rights
+              Reserved.</p>
+          </div>
+
+
+        </mat-tab>
+        <mat-tab label="Get in Touch">
+          <div class="tab-content2">
+           
+            <!-- <form>
+              <div class="form-group">
+                <label for="name">Name*</label>
+                <input id="name" type="text" class="form-control" placeholder="Enter your name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email*</label>
+                <input id="email" type="email" class="form-control" placeholder="Enter your email" />
+              </div>
+              <div class="form-group">
+                <label for="phone">Mobile Number*</label>
+                <input id="phone" type="tel" class="form-control" placeholder="Enter your phone number" />
+              </div>
+              <div class="form-group">
+                <label for="message">How can we help you?*</label>
+                <textarea id="message" class="form-control" rows="4" maxlength="1000"
+                  placeholder="Enter your message"></textarea>
+                <div class="char-count">0/1000</div>
+              </div>
+              <button type="submit" class="submit-btn">Submit</button>
+            </form> -->
+
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+
+              <!-- Name field -->
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" placeholder="Jane Smith" >
+                <!-- <mat-error *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+                  Name is required.
+                </mat-error> -->
+              </mat-form-field>
+            
+              <!-- Email field -->
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" formControlName="email" placeholder="mail@example.com" >
+                <!-- <mat-error *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                  Valid email is required.
+                </mat-error> -->
+              </mat-form-field>
+            
+              <!-- Mobile Number with country code -->
+              <div class="phone-container">
+                <mat-form-field appearance="outline" class="country-select">
+                  <mat-label>Country Code</mat-label>
+                  <mat-select formControlName="countryCode">
+                    <mat-option value="+1">+1</mat-option>
+                    <!-- Add more country codes -->
+                  </mat-select>
+                </mat-form-field>
+            
+                <mat-form-field appearance="outline" class="full-width">
+                  <mat-label>Mobile Number</mat-label>
+                  <input matInput type="tel" formControlName="phone" placeholder="Enter phone number" >
+                  <!-- <mat-error *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched">
+                    Valid phone number is required.
+                  </mat-error> -->
+                </mat-form-field>
+              </div>
+            
+              <!-- Message field -->
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>How can we help you?</mat-label>
+                <textarea matInput formControlName="message" rows="4" maxlength="1000" placeholder="Enter your message" ></textarea>
+                <!-- <mat-hint align="end">{{contactForm.get('message')?.value?.length || 0}}/1000</mat-hint>
+                <mat-error *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+                  Message is required.
+                </mat-error> -->
+              </mat-form-field>
+            
+              <!-- Info text -->
+            
+              <!-- Submit button -->
+               <div style="text-align: end;">
+                <button mat-raised-button color="primary" type="submit"  class="submit-btn2">
+                  Submit
+                </button>
+               </div>
+              <p class="info-text pt-2">Make sure to avoid including any sensitive information you don't want to share with this page.</p>
+
+              <!-- Buttons Section -->
+            <div class="button-container pt-3">
+              <button class="custom-button">
+                <img src="../../../assets/images/share.png" style="height: 20px;width: 20px;" alt="LinkedIn Icon">
+                &nbsp;&nbsp;Send
+              </button>
+              <button class="custom-button">
+                <img src="../../../assets/images/download.png" style="height: 20px;width: 20px;" alt="LinkedIn Icon">
+                &nbsp;&nbsp; Save Contact
+              </button>
+            </div>
+            <!-- <p class="pt-3 m-0" style="text-align: left;">Copyright 2023 SPECTRAFORCE®. All Rights Reserved.</p> -->
+            <p class="footer-text">Copyright 2023 SPECTRA<span class="footer-inside-text">FORCE</span>®. All Rights
+              Reserved.</p>
+          
+
+            </form>
+            
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+
+  </div>
+
+
+
+</div>

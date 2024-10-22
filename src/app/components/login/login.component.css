@@ -1,0 +1,233 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container-fluid {
+    height: 100vh; /* Full height of the viewport */
+    padding: 0;
+  }
+  
+  .row {
+    height: 100%; /* Full height for the row */
+    margin: 0;
+  }
+  
+  .img-fluid {
+    object-fit: cover; /* Ensure the image covers the container */
+    height: 100vh !important; /* Image takes full height of its container */
+    width: 100%; /* Image takes full width of its container */
+  }
+  
+  
+  
+  .login-container {
+    
+    max-width: 500px;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #FF6600; /* Spectra orange color */
+    font-size: 32px;
+  }
+  
+  p {
+    color: #707070;
+    margin-bottom: 20px;
+  }
+  
+  .progress-bar-container {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .progress-bar {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+  }
+  
+  .progress-bar-step {
+    color: #a0a0a0;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .progress-bar-step.active {
+    color: #FF6600;
+    border-bottom: 3px solid #FF6600;
+  }
+  
+  .form-control {
+    border-radius: 30px;
+    padding: 10px 20px;
+  }
+  
+  .btn-primary {
+    background-color: #FF6600;
+    border-color: #FF6600;
+    border-radius: 30px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #e65c00;
+    border-color: #e65c00;
+  }
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container-fluid {
+    height: 100vh;
+}
+
+
+
+.spectra-logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.custom-stepper {
+    display: flex;
+    justify-content:flex-start;
+    margin-bottom: 20px;
+    gap: 50px;
+}
+
+.step {
+  position: relative;
+  /* flex: 1;
+  text-align: start; */
+}
+
+.step span {
+  display: inline-block;
+  color: #D9D9D9; /* Default color for inactive steps */
+  font-weight: 600;
+  padding-bottom: 5px;
+  font-size: 14px;
+  border-bottom: 2px solid #99999B; /* Default inactive border color */
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.step.active span {
+  color: #000000; /* Active step text color */
+  border-bottom: 2px solid #FE6B00; /* Active step border color */
+}
+
+.step.completed span {
+  color: #707070; /* Completed step text color */
+  border-bottom: 2px solid #FE6B00; /* Completed step border color (orange) */
+}
+
+
+
+.welcome-title {
+    color: #99999B; /* Spectra orange color */
+    font-size: 55px;
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif !important;
+}
+
+.spectracard-title{
+  color: #FE6B00; /* Spectra orange color */
+  font-size: 55px;
+  margin-bottom: 40px;
+  font-weight: 500;
+  font-family: 'Oswald', sans-serif !important;
+
+}
+.spectracard-subtext{
+  color: #535353; /* Spectra orange color */
+  font-size: 18px;
+  
+  font-weight: 500;
+  
+}
+
+p {
+    color: #707070;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+.btn-primary {
+    background-color: #FE6B00;
+    border-color: #FE6B00;
+    border-radius: 30px;
+    padding: 10px 33px 10px 33px;
+}
+
+.btn-primary:hover {
+    background-color: #e65c00;
+    border-color: #e65c00;
+}
+
+.img-fluid {
+    object-fit: cover; /* Ensures the image covers the container */
+    height: 100%; /* Full height of its container */
+    width: 100%; /* Full width of its container */
+}
+
+.verify-title {
+  font-size: 32px;
+  color: #454545;
+  margin-bottom: 10px;
+  font-weight: 700;
+  line-height: 39.01px;
+
+}
+
+.instruction-text {
+  color: #535353;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.code-inputs .form-control {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 24px;
+  margin-right: 10px;
+  border-radius: 8px;
+  border: 2px solid #D9D9D9; /* Define the border */
+  background-color: #fff; /* Ensure a consistent background */
+  box-shadow: none; /* Remove shadow effect */
+  outline: none; /* Remove focus outline */
+  transition: border-color 0.3s ease; /* Smooth transition */
+}
+
+/* Remove hover and focus effects */
+.code-inputs .form-control:focus {
+  
+  box-shadow: none; /* Ensure no box-shadow on focus */
+}
+
+
+
+
+.resend-link {
+  color: #1891C8;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+  text-decoration: underline;
+}
+
+

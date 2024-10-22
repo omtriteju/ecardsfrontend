@@ -1,0 +1,30 @@
+<h2 class="popup-title">Your <span class="highlight-text">e-card</span> is here</h2>
+
+<!-- <div class="ecard-image" style="text-align: center;">
+    <img src="../../../assets/images/e-card.png" alt="Spectra Logo" class="e-card-image">
+
+</div> -->
+
+<div class="ecard-container">
+    <!-- Top Section with dynamic name and position -->
+    <div class="ecard-header">
+      <div class="ecard-background">
+        <div class="text-section">
+          <h1 class="ecard-name">name </h1>
+          <h3 class="ecard-position">position </h3>
+        </div>
+      </div>
+    </div>
+  
+    <!-- QR Code Section -->
+    <div class="ecard-footer">
+      <img src="qrCodeUrl" alt="QR Code" class="qr-code-image" />
+      <p class="ecard-scan-text">Scan for  scanText </p>
+    </div>
+  </div>
+  
+<div style="display: flex;flex-direction: column;padding: 0px 75px;align-items: center;">
+    <button mat-button class="download-button" (click)="downloadEcard()">Download e-card</button>
+<a href="#" class="cancel-link" (click)="closeDialog()">Cancel</a>
+</div>
+

@@ -1,0 +1,112 @@
+/* Dialog container */
+.popup-title {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  .highlight-text {
+    color: #ff6a00; /* Orange for "e-card" */
+  }
+  
+  /* E-card image */
+  .ecard-image img {
+    /* width: 100%; */
+    border-radius: 10px;
+    /* margin: 20px 0; */
+  }
+  
+  /* Download button */
+  .download-button {
+    background-color: #ff6a00;
+    color: white;
+    padding: 4px 12px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 5px;
+  }
+  
+  .download-button:hover {
+    background-color: #e65a00;
+  }
+  
+  /* Cancel link */
+  .cancel-link {
+    color: #666;
+    /* text-decoration: none; */
+    font-size: 14px;
+  }
+  
+  .cancel-link:hover {
+    text-decoration: underline;
+  }
+
+  .e-card-image{
+    height: 400px;
+    margin: 0px !important;
+  }
+
+/* Container for the entire e-card */
+.ecard-container {
+    background: white;
+    width: 350px;
+    height: 550px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Header with a triangular cut */
+  .ecard-header {
+    position: relative;
+    height: 60%;
+    background: linear-gradient(to bottom, #ff6a00 50%, #ffd300 50%);
+    border-radius: 20px 20px 0 0;
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Section for name and position text */
+  .text-section {
+    text-align: center;
+    color: white;
+  }
+  
+  .ecard-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .ecard-position {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0;
+    opacity: 0.8;
+  }
+  
+  /* QR Code Section */
+  .ecard-footer {
+    height: 40%;
+    padding-top: 40px;
+  }
+  
+  .qr-code-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .ecard-scan-text {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+  }
+  
+  

@@ -1,0 +1,47 @@
+<div class="container-fluid user-management-container p-0" >
+   
+
+    <nav class="navbar">
+        
+            <div>
+            <img src="../../../assets/images/spectra-logo.png" alt="Spectra Logo" class="spectra-logo">
+
+            </div>
+
+         
+          <div >
+            <div class="user-profile-icon2">
+                <fa-icon [icon]="['fas', 'user']" class="user-icon2"></fa-icon>
+              </div>
+          </div>
+        
+      </nav>
+  
+    <div class="p-5">
+      <div class="top-bar">
+        <button (click)="openCreateUserDialog()">Create Profile</button>
+      </div>
+    
+      <div class="user-grid">
+        <div *ngFor="let user of users; let i = index" class="user-card">
+          <div class="user-profile-icon">
+            <fa-icon [icon]="['fas', 'user']" class="user-icon"></fa-icon>
+          </div>
+          <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+          <p><strong>Email:</strong> {{ user.email }}</p>
+          <p><strong>Job Title:</strong> {{ user.jobTitle }}</p>
+          <p><strong>Primary Phone:</strong> {{ user.phoneNumberPrimary }}</p>
+          <p><strong>Secondary Phone:</strong> {{ user.phoneNumberSecondary }}</p>
+          <p><strong>LinkedIn:</strong> <a [href]="user.linkedinLink" target="_blank">{{ user.linkedinLink }}</a></p>
+          <p><strong>Website:</strong> <a [href]="user.websiteLink" target="_blank">{{ user.websiteLink }}</a></p>
+    
+          <div class="action-icons">
+            <span class="view-icon" (click)="viewECard(user.email)" matTooltip="View Profile">👁</span>
+            <span (click)="editUser(user)" class="edit-icon" matTooltip="Edit Profile">✏️</span>
+            <span (click)="deleteUser(i)" class="delete-icon" matTooltip="Delete Profile">🗑️</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

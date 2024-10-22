@@ -1,0 +1,458 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+.e-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F8FAFC;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  .ecard-container{
+    background: #F4F4F4;
+    min-height: 100vh;
+  }
+  .spectra-background-logo {
+    max-width: 700px;
+    
+  }
+  
+  .e-card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .e-card p {
+    
+    margin: 5px 0 20px 0;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-info a {
+    text-decoration: none;
+    color: #0073b1; /* LinkedIn's blue */
+    margin: 5px 0;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-info a:hover {
+    color: #005582;
+    transition: color 0.2s;
+  }
+  
+  .contact-info a::before {
+    content: '🔗';
+    margin-right: 8px;
+  }
+  
+  .contact-info a[href^="tel:"]::before {
+    content: '📞';
+  }
+  
+  .contact-info a[href^="mailto:"]::before {
+    content: '✉️';
+  }
+  
+  .contact-info a[href*="linkedin"]::before {
+    content: '🔗';
+  }
+  
+  .contact-info a[href*="website"]::before {
+    content: '🌐';
+  }
+  
+  .e-card .action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .e-card .action-buttons button {
+    background-color: #f90;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .e-card .action-buttons button:hover {
+    background-color: #d98000;
+    transition: background-color 0.2s;
+  }
+  
+  .e-card .action-buttons .send-button {
+    background-color: #28a745; /* Green for the send button */
+  }
+  
+  .e-card .action-buttons .send-button:hover {
+    background-color: #218838;
+  }
+  
+  .e-card .action-buttons .save-button {
+    background-color: #007bff; /* Blue for the save button */
+  }
+  
+  .e-card .action-buttons .save-button:hover {
+    background-color: #0056b3;
+  }
+
+  .navbar {
+    background-color: #ffffff; /* Set background color */
+    border-bottom: 1px solid #ccc; /* Bottom border */
+    padding: 10px 20px; /* Padding around navbar */
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center; /* Vertically center elements */
+    justify-content: space-between; /* Space between elements */
+  }
+  
+  .spectra-logo {
+    max-width: 150px; /* Limit logo size */
+    margin-right: 20px; /* Space to the right of the logo */
+  }
+  
+  .navbar-brand {
+    font-size: 24px; /* Brand name size */
+    font-weight: bold; /* Bold text */
+    color: #d52b1e; /* Brand color */
+  }
+
+  .user-profile-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    z-index: 1000;
+    margin-top: -35px;
+  }
+  
+  .user-profile-icon2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  
+  .user-icon {
+    font-size: 40px;
+    color: #6c757d;
+  }
+  .user-icon2 {
+    font-size: 20px;
+    color: #6c757d;
+  }
+
+  .contact-container {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .call-button {
+    background-color: #ff7a00; /* Orange background */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .call-button:hover {
+    background-color: #e56c00; /* Darker orange on hover */
+  }
+  
+  .whatsapp-icon {
+    width: 36px !important;
+    height: 36px !important;
+    cursor: pointer;
+  }
+
+  .tab-container {
+    width: 100%;
+   
+  }
+  
+  .tab-content {
+    padding: 20px;
+  }
+  .tab-content2 {
+    padding: 0px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .submit-btn {
+    background-color: #ff6a00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #ff5400;
+  }
+  
+  .char-count {
+    font-size: 12px;
+    color: #888;
+    text-align: right;
+  }
+
+  ::ng-deep .mat-tab-group.mat-primary .mat-tab-label-active {
+    color: #0F172A; /* Active tab text color */
+  }
+  
+  ::ng-deep .mat-tab-group .mat-ink-bar {
+    background-color: #FE6B00 !important; /* Active tab underline color */
+  }
+
+  .mat-tab-label-active {
+    color: #0F172A; /* Active tab text color */
+  }
+  
+  .mat-ink-bar {
+    background-color: #FE6B00 !important; /* Active tab underline color */
+  }
+  
+  .tab-content {
+    padding: 20px;
+  }
+  
+  .links-section {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 5px;  */
+   
+  }
+  
+  .contact-item {
+    display: flex;
+    width: calc(50% - 0px); /* Two items per row */
+    padding: 10px 0px 10px 0px;
+    box-sizing: border-box;
+    /* margin-right: 5px; */
+    align-items: center;
+  }
+  
+  .icon-column {
+    flex: 0 0 40px; /* Fix width for the icons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px !important;
+    
+  }
+  
+  .contact-icon {
+    color: #FE6B00; /* Adjust icon color if needed */
+    width: 40px;
+    height: 40px;
+   
+  }
+  
+  .info-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* margin-right: 10px;
+    max-width: 320px; */
+    
+  }
+  
+  .info-column span {
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .info-column p {
+    margin: 0;
+  }
+  
+  /* For responsiveness, make full-width on small screens */
+  @media (max-width: 768px) {
+    .contact-item {
+      width: 100%; /* Full width on small devices */
+    }
+  }
+  
+  .video-section {
+    margin-top: 20px;
+  }
+
+  .button-container {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+  }
+  
+  .custom-button {
+    background-color: #a2b0c1;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-button i {
+    margin-right: 8px; /* Space between icon and text */
+  }
+  
+  .custom-button:hover {
+    background-color: #8c9dad;
+  }
+  .footer-text {
+   
+    font-size: 14px; /* Adjust font size based on the image */
+    color: #334155; /* A similar dark color to the text in the image */
+    text-align: left;
+    padding-top: 12px;
+    margin: 0px !important;
+    font-weight: 400;
+  }
+  
+  .footer-inside-text {
+    font-weight: 700;
+  }
+
+  .profile-info{
+    font-size: 16px;
+    font-weight: 400;
+    color: #0F172A;
+    text-align: left;
+    word-break: break-all;
+    word-wrap: break-word; /* Allows long words to break onto the next line */
+    overflow-wrap: break-word; /* Ensures breaking for overflowing text */
+    white-space: normal; /* Allows wrapping */
+  }
+  .profile-heading{
+    font-size: 12px;
+    font-weight: 400;
+    color: #334155;
+  }
+
+  .generate-ecard-btn {
+    background-color: #FF6600; /* Orange background */
+    border: none;
+    border-radius:5px;
+    color: white;
+    padding: 10px 33px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .generate-ecard-btn:hover {
+    background-color: #e65c00; /* Darker shade of orange on hover */
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 600px;
+    /* margin: 0 auto; */
+    padding: 20px;
+    
+    color: #fff;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .phone-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .country-select {
+    flex: 1;
+  }
+  
+  .full-width {
+    flex: 2;
+  }
+  
+  .submit-btn2 {
+    background-color: #FF6600;
+    color: #fff;
+    /* width: 100%; */
+    /* height: 50px; */
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:disabled {
+    background-color: #FF6B00;
+  }
+  
+  .info-text {
+    font-size: 12px;
+    color: #999;
+    /* margin-top: -10px; */
+    margin: 0px;
+    text-align: start;
+  }
+  
+  
+
+  
+  
+  
