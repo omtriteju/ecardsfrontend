@@ -11,27 +11,30 @@
 
 </div> -->
 
-<div class="ecard-container pt-1">
+<div class="ecard-container pt-1 ">
   <!-- Top Section with dynamic name and position -->
-  <img src="../../../assets/images/ecard-background.png" alt="Spectra Logo" class="e-card-image">
-  <div class="e-card-toptext pe-2" >
-    <p style="margin: 0px;">Mohan krishna </p>
-    <p style="margin: 0px;">Sai</p>
-    <p class="position-text">Software Developer</p>
-
-  </div>
-  <p class="e-card-footertext ">Scan for <span style="font-weight: bold;">NEW JOBPHORIA</span></p>
+   <div class="qr-ecard" >
+    <img src="../../../assets/images/ecard-background.png" alt="Spectra Logo" class="e-card-image">
+    <div class="e-card-toptext pe-2" >
+      <p style="margin: 0px;">Mohan krishna </p>
+      <p style="margin: 0px;">Sai</p>
+      <p class="position-text">Software Developer</p>
   
-  <!-- QR Code Section -->
-  <div class="qr-code-overlay">
-    <qrcode
-      [qrdata]="'http://localhost:4200/e-card/mohan.krishnasai@spectraforce.com'"
-      [width]="144"
-      [elementType]="'url'"
-      [colorLight]="'#f8d731'"
-      [errorCorrectionLevel]="'M'">
-    </qrcode>
-  </div>
+    </div>
+    <p class="e-card-footertext ">Scan for <span style="font-weight: bold;">NEW JOBPHORIA</span></p>
+    
+    <!-- QR Code Section -->
+    <div class="qr-code-overlay">
+      <qrcode
+        [qrdata]="'http://localhost:4200/e-card/mohan.krishnasai@spectraforce.com'"
+        [width]="144"
+        [elementType]="'url'"
+        [colorLight]="'#f8d731'"
+        [errorCorrectionLevel]="'M'">
+      </qrcode>
+    </div>
+   </div>
+
 
   <!-- <div class="ecard-footer">
     <p class="ecard-scan-text">Scan for scanText</p>
@@ -40,7 +43,9 @@
 
   
 <div class="pt-2" style="display: flex;flex-direction: column;padding: 0px 75px;align-items: center;">
-    <button mat-button class="download-button" (click)="downloadEcard()">Download e-card</button>
+    <button  class="download-button" (click)="downloadEcard()">
+      <img src="../../../assets/images/download.png" style="height: 20px;width: 20px;" alt="LinkedIn Icon">
+      &nbsp;Download e-card</button>
 <a class="cancel-link" (click)="closeDialog()">Cancel</a>
 </div>
 

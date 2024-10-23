@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import html2canvas from 'html2canvas';
 
 @Component({
   selector: 'app-ecard-dialog',
@@ -20,8 +21,26 @@ export class EcardDialogComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  downloadEcard(): void {
-    // Logic to download e-card
-    console.log('Download e-card clicked');
+  
+  downloadEcard() {
+    const ecardElement = document.querySelector('.qr-ecard') as HTMLElement;
+  
+    // Capture the e-card div as an image without extra padding/margins
+    html2canvas(ecardElement, {
+      scale: 2, // Increase the resolution of the canvas
+      useCORS: true, // Enable cross-origin resource sharing if there are external images
+      backgroundColor: null, // Set the background color to null for transparent background
+      scrollX: 0, // Prevent scrolling while capturing
+      scrollY: 0,
+      width: ecardElement.clientWidth, // Use the actual width of the card
+      height: ecardElement.clientHeight // Use the actual height of the card
+    }).then((canvas) => {
+      const link = document.createElement('a');
+      link.href = canvas.toDataURL('image/jpeg');  // Capture as a JPEG
+      link.download = 'e-card.jpg';  // File name for download
+      link.click();  // Trigger the download
+    });
+    this.dialogRef.close();
   }
+  
 }

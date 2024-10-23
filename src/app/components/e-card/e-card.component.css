@@ -136,8 +136,8 @@
   }
 
   .user-profile-icon {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     background-color: #f0f0f0;
     display: flex;
@@ -226,7 +226,7 @@
   }
   
   .submit-btn {
-    background-color: #ff6a00;
+    background-color: #FE6B00;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -235,7 +235,7 @@
   }
   
   .submit-btn:hover {
-    background-color: #ff5400;
+    background-color: #FE6B00;
   }
   
   .char-count {
@@ -383,7 +383,7 @@
   }
 
   .generate-ecard-btn {
-    background-color: #FF6600; /* Orange background */
+    background-color: #FE6B00; /* Orange background */
     border: none;
     border-radius:5px;
     color: white;
@@ -396,9 +396,16 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
+
+  .user-photo {
+    width: 100%; /* Make the image take up the full width of the container */
+    height: 100%; /* Make the image take up the full height of the container */
+    border-radius: 50%; /* This makes the image round */
+    object-fit: cover; /* Ensures the image is centered and scaled properly */
+  }
   
   .generate-ecard-btn:hover {
-    background-color: #e65c00; /* Darker shade of orange on hover */
+    background-color: #FE6B00; /* Darker shade of orange on hover */
   }
 
   .contact-form {
@@ -429,7 +436,7 @@
   }
   
   .submit-btn2 {
-    background-color: #FF6600;
+    background-color: #FE6B00;
     color: #fff;
     /* width: 100%; */
     /* height: 50px; */
@@ -439,9 +446,9 @@
     cursor: pointer;
   }
   
-  .submit-btn:disabled {
-    background-color: #FF6B00;
-  }
+  /* .submit-btn:disabled {
+    background-color: #FE6B00;
+  } */
   
   .info-text {
     font-size: 12px;
