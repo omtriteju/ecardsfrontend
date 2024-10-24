@@ -23,6 +23,7 @@
     "@fortawesome/angular-fontawesome": "^0.11.1",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",  // Added this line
     "@techiediaries/ngx-qrcode": "^9.1.0",
     "@types/node": "^22.7.4",
     "angularx-qrcode": "^13.0.15",
